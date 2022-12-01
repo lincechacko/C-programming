@@ -33,10 +33,29 @@ static int backup=0;
 int start;
 start=backup;
 int flag=0;
+int flag1=0;
+
+
+for(start;str[start]!='\0';start++){
+for(int d=0;delim[d]!='\0';d++){
+if(str[start]==delim[d]){
+flag1=1;
+break;
+}
+else{
+flag1=0;
+}
+}
+if(flag1==0){
+backup=start;
+break;
+}
+}
+
+
 if(str[start]=='\0'){
 return 0;
 }
-
 
 for(int i=start;str[i]!='\0';i++){
 for(int j=0;delim[j]!='\0';j++){
@@ -56,7 +75,7 @@ flag=0;
 }
 }
 if(flag==0){
-backup=x;	
+backup=x;
 return str+start;
 }
 }
