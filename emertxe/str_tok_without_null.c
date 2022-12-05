@@ -1,3 +1,5 @@
+//here using strtok function without passing NULL by passing the string itself
+
 #include <stdio.h>
 #include <string.h>
 #include <stdio_ext.h>
